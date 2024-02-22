@@ -1,0 +1,81 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\StudentInformation;
+use Illuminate\Http\Request;
+
+class StudController extends Controller
+{
+    public function home(){
+        // list of students
+        $information=StudentInformation::all();
+        return view('welcome',['info' => $information]);
+    }
+
+    public function create(){
+        // create form;
+        return view('create');
+    }
+
+    public function edit($id){
+        // update form
+        $information=StudentInformation::findOrfail($id);
+        return view('update',['editinfo' => $information]);
+    }
+
+    public function addstudent(Request $request){
+        // validation for user
+        $validated=$request->validate([
+            "name" => "required|unique:student_information,name",
+            "email" => "required|email|unique:student_information,email",
+            "address" => "required",
+            "contact" => "required|numeric",
+            "previous_school" => "required",
+            "previous_school_year" => "required|numeric",
+            "average" => "required|numeric",
+        ]);
+        StudentInformation::create([
+            // 'fieldNameDatabase' => 'value',
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'address' => $validated['address'],
+            'contact' => $validated['contact'],
+            'previous_school' => $validated['previous_school'],
+            'previous_school_year' => $validated['previous_school_year'],
+            'average' => $validated['average'],
+        ]);
+        return redirect(route('home'));
+    }
+
+
+    public function updates(Request $request, $id){
+        // update process information
+        $validated=$request->validate([
+            "name" => "required",
+            "email" => "required",
+            "address" => "required",
+            "contact" => "required",
+            "previous_school" => "required",
+            "previous_school_year" => "required",
+            "average" => "required",
+        ]);
+        $information=StudentInformation::findOrfail($id);
+        $information->update([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'address' => $validated['address'],
+            'contact' => $validated['contact'],
+            'previous_school' => $validated['previous_school'],
+            'previous_school_year' => $validated['previous_school_year'],
+            'average' => $validated['average'],
+        ]);
+        return redirect(route('home'));
+    }
+
+    public function delete($id){
+        $information=StudentInformation::findOrfail($id);
+        $information->delete();
+        return redirect(route('home'));
+    }
+}
