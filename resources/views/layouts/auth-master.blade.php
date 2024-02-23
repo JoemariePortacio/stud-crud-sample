@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.87.0">
-    <title>Situdent Information</title>
+    <title>Student Information</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +17,7 @@
 </head>
 <body class="text-center">
     
-    <main class="form-signin">
+    <main class="form-signin h-screen">
 
         @yield('content')
         
