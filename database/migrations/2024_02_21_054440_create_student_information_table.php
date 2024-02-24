@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('address');
             $table->integer('contact');
             $table->string('status');
+            $table->string('course');
             $table->string('previous_school');
             $table->integer('previous_school_year');
             $table->float('average');

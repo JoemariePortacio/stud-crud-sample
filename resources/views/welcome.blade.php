@@ -6,19 +6,19 @@
         <div class="p-3 grid gap-2 grid-cols-1 md:grid-cols-3 grid-rows-1 w-full h-auto text-slate-700 ">
     
             <a href="" class=" space-y-1 font-semibold h-36 p-4 rounded-lg items-center text-start shadow-xl border border-black hover:bg-slate-300   hover:text-gray-700">
-              <i class=" text-2xl fa-solid fa-basket-shopping"></i>
+              <i class="fa-solid fa-user-graduate mr-2 text-4xl"></i>
               <h3 class="text-4xl">10,356</h3>
               <p class="text-sm">Student</p>
             </a>
     
             <a href="" class=" space-y-1 font-semibold h-36 p-4 rounded-lg items-center text-start shadow-xl border border-black hover:bg-slate-300   hover:text-gray-700">
-              <i class=" text-2xl fa-solid fa-basket-shopping"></i>
+              <i class="fa-solid fa-user-tie mr-2 text-4xl"></i>
               <h3 class="text-4xl">145</h3>
               <p class="text-sm">Teacher</p>
             </a>
     
             <a href="" class=" space-y-1 font-semibold h-36 p-4 rounded-lg items-center text-start shadow-xl border border-black hover:bg-slate-300   hover:text-gray-700">
-              <i class=" text-2xl fa-solid fa-basket-shopping"></i>
+              <i class="fa-solid fa-user-group mr-2 text-4xl"></i>
               <h3 class="text-4xl">45</h3>
               <p class="text-sm">Parents</p>
             </a>

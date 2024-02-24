@@ -29,7 +29,7 @@
                         <a href="#" class="block px-4 py-2 hover:bg-gray-700"><i class="fa-solid fa-book-open mr-2"></i>Subject</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-700"><i class="fa-solid fa-calendar mr-2"></i>Calendar</a>
+                        <a href="{{route('fullcalender')}}" class="block px-4 py-2 hover:bg-gray-700"><i class="fa-solid fa-calendar mr-2"></i>Calendar</a>
                     </li>
                     <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-700"><i class="fa-solid fa-newspaper mr-2"></i>News</a>
@@ -38,7 +38,7 @@
             </nav>
             
             <div class="p-4 border-t flex flex-col border-gray-700">
-                <a href="#" class="text-sm hover:text-gray-400 hover:bg-slate-500 rounded px-2 py-3"><i class="fa-solid fa-user-gear mr-2"></i>Accounts</a>
+                <a href="{{route('accounts.home')}}" class="text-sm hover:text-gray-400 hover:bg-slate-500 rounded px-2 py-3"><i class="fa-solid fa-user-gear mr-2"></i>Accounts</a>
                 <a href="{{ route('logout.perform') }}" class="text-sm hover:text-gray-400 hover:bg-slate-500 rounded px-2 py-3"><i class="fa-solid fa-right-from-bracket mr-2"></i>Logout</a>
             </div>
         </div>
@@ -47,7 +47,7 @@
         <!-- Main Content -->
         <div class="flex-1 bg-gray-100 overflow-y-auto">
             <!-- Navbar -->
-            <div class="bg-white shadow-md fixed w-screen">
+            <div class="bg-white shadow-md fixed w-screen z-50 ">
                 <div class="container  px-4">
                     <div class="flex  justify-between items-center py-4">
                         <div class="flex md:hidden  justify-start text-2xl">

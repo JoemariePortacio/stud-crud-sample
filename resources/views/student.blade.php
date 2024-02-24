@@ -39,6 +39,7 @@
                                 <th class="px-6 py-3 bg-gradient-to-r from-gray-200 to-gray-100 text-xs font-semibold text-gray-700 uppercase tracking-wider">Address</th>
                                 <th class="px-6 py-3 bg-gradient-to-r from-gray-200 to-gray-100 text-xs font-semibold text-gray-700 uppercase tracking-wider">Contact</th>
                                 <th class="px-6 py-3 bg-gradient-to-r from-gray-200 to-gray-100 text-xs font-semibold text-gray-700 uppercase tracking-wider">Status</th>
+                                <th class="px-6 py-3 bg-gradient-to-r from-gray-200 to-gray-100 text-xs font-semibold text-gray-700 uppercase tracking-wider">Course</th>
                                 <th class="px-6 py-3 bg-gradient-to-r from-gray-200 to-gray-100 text-xs font-semibold text-gray-700 uppercase tracking-wider">Last School Attended</th>
                                 <th class="px-6 py-3 bg-gradient-to-r from-gray-200 to-gray-100 text-xs font-semibold text-gray-700 uppercase tracking-wider">School Year</th>
                                 <th class="px-6 py-3 bg-gradient-to-r from-gray-200 to-gray-100 text-xs font-semibold text-gray-700 uppercase tracking-wider">Average</th>
@@ -54,6 +55,7 @@
                                 <td class="px-6 py-4 text-sm text-gray-900">{{ $item->address }}</td>
                                 <td class="px-6 py-4 text-sm text-gray-900">{{ $item->contact }}</td>
                                 <td class="px-6 py-4 text-sm text-gray-900">{{ $item->status }}</td>
+                                <td class="px-6 py-4 text-sm text-gray-900">{{ $item->course }}</td>
                                 <td class="px-6 py-4 text-sm text-gray-900">{{ $item->previous_school }}</td>
                                 <td class="px-6 py-4 text-sm text-gray-900">{{ $item->previous_school_year }}</td>
                                 <td class="px-6 py-4 text-sm text-gray-900">{{ $item->average }}</td>

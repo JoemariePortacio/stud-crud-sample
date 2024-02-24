@@ -110,7 +110,19 @@
                         </div>
                       </label>
                 </div>
-
+                <label for="course" class="block mb-2 text-sm font-medium text-gray-900">Choose Course</label>
+                <select id="course" name="course" class="border px-3 py-3 rounded-full w-full max-w-xs">
+                  <option selected>Please Choose your Course</option>
+                  <option value="BSIT">Bachelor of Science in Information Technology</option>
+                  <option value="BSCRIM">Bachelor of Scinece in Criminology</option>
+                  <option value="BSHM">Bachelor of Science in Hospitality Management </option>
+                  <option value="BSA">Bachelor of Science in Accountancy</option>
+                  <option value="BSEE">Bachelor of Scince in Elementery Education</option>
+                  <option value="BSED">Bachelor of Science in Secondary Education</option>
+                </select>
+                @error('course')
+                <span class="text-red-500 label-text-alt">{{$message}}</span>
+                @enderror
             </div>
             <button class="btn btn-outline btn-success">Submit</button>
         </form>

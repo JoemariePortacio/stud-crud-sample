@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ParentsController;
-use App\Http\Controllers\StudController;
-use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudController;
+use App\Http\Controllers\ParentsController;
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\FullCalenderController;
 
 Route::group(['namespace' => 'App\Http\Controllers'], function() {   
 
@@ -69,6 +70,16 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
                 Route::delete('/delete/{id}','delete')->name('delete');
     
             }); 
+
+                // Route for account settings
+                Route::get('/settings/home', function () {
+                    return view('accounts.home');
+                })->name('accounts.home');
+
+            // route for calendar
+            Route::get('fullcalender', [FullCalenderController::class, 'index'])->name('fullcalender');
+            Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax'])->name('fullcalender.ajax');
+
     });
 
 });

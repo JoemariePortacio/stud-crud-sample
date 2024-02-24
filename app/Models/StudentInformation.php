@@ -11,5 +11,6 @@ class StudentInformation extends Model
 
     protected $fillable=['name',
     'email','address','contact',
-    'status','previous_school','previous_school_year','average'];
+    'status', 'course',
+    'previous_school','previous_school_year','average'];
 }
