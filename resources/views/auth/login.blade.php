@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="flex justify-center items-center h-screen">
-        <form method="post" action="{{ route('login.perform') }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto">
+        <form method="post" action="{{ route('login.perform') }}" class="bg-transparent shadow-2xl rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto">
             @csrf
             
-            <h1 class="text-3xl font-semibold mb-6 text-center">Login</h1>
+            <h1 class="text-3xl mb-6 text-center font-bold text-gray-700">Login</h1>
 
             @include('layouts.partials.messages')
 
@@ -27,7 +27,7 @@
 
             <button class="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-200" type="submit">Login</button>
             <div class="underline hover:underline-offset-4 pt-2">
-                <a href="{{route('register')}}">Register</a>
+                <a href="{{route('register')}}">Dont have account?</a>
             </div>
             
         </form>

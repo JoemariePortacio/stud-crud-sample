@@ -1,5 +1,5 @@
 <x-system>
-    <div class="flex h-screen">
+    <div class="flex h-fit">
             <!-- Table Content -->
             <div class="container mx-auto pt-24 pb-8 px-4">
                 <div class="p-4 text-center font-bold text-3xl ">
@@ -55,12 +55,25 @@
                                 <td class="px-6 py-4 text-sm text-gray-900">{{ $item->position }}</td>
                                 <td class="px-6 py-4 text-sm text-gray-900">
                                     <div class="flex items-center space-x-4">
-                                        <a href="{{ route('teacher.edit', $item->id) }}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                                        <form action="{{ route('teacher.delete', $item->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="text-red-600 hover:text-red-900">Delete</button>
-                                        </form>
+                                        <a href="{{ route('teacher.edit', $item->id) }}" class="btn btn-success text-white">Update</a>
+                                    <label for="delete{{$loop->index+1}}" class="btn btn-error text-white">Delete</label>
+
+                                    <div>
+                                        <input type="checkbox" id="delete{{$loop->index+1}}" class="modal-toggle" />
+                                        <div class="modal" role="dialog">
+                                            <div class="modal-box">
+                                                <h3 class="font-bold text-lg">Are you sure?</h3>
+                                                <p class="py-4">do you want to delete?</p>
+                                                    <div class="modal-action">
+                                                        <form action="{{ route('teacher.delete', $item->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"  class="btn btn-success text-white">Yes</button>
+                                                        <label for="delete{{$loop->index+1}}" class="btn btn-error text-white">No</label>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>

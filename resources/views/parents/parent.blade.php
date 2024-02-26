@@ -1,5 +1,5 @@
 <x-system>
-    <div class="flex h-screen">
+    <div class="flex h-fit">
             <!-- Table Content -->
             <div class="container mx-auto pt-24 pb-8 px-4">
                 <div class="p-4 text-center font-bold text-3xl ">

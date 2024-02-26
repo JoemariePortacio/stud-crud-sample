@@ -58,34 +58,36 @@
                       </label>
                 </div>
                 <div class="">
-                  <label class="form-control w-full max-w-xs">
-                      <div class="label">
-                        <span class="label-text">Status</span>
-                      </div>
-                      <input type="text" id="status" name="status" placeholder="Enter your Status" class="input input-bordered w-full max-w-xs" />
-                      <div class="label">
-                          @error('status')
-                          <span class="text-red-500 label-text-alt">{{$message}}</span>
-                          @enderror
-                      </div>
-                    </label>
+                  <label for="status" class="block mb-2 text-sm font-medium text-gray-900">Status</label>
+                  <select id="status" name="status" class="border px-3 py-3 rounded-full w-full max-w-xs">
+                    <option selected>Job Status</option>
+                    <option value="FullTime">Full-Time</option>
+                    <option value="PartTime">Part-Time</option>
+                  </select>
+                  @error('status')
+                  <span class="text-red-500 label-text-alt">{{$message}}</span>
+                  @enderror
               </div>
               <div class="">
-                <label class="form-control w-full max-w-xs">
-                    <div class="label">
-                      <span class="label-text">Position</span>
-                    </div>
-                    <input type="text" id="position" name="position" placeholder="Enter your position" class="input input-bordered w-full max-w-xs" />
-                    <div class="label">
-                        @error('position')
-                        <span class="text-red-500 label-text-alt">{{$message}}</span>
-                        @enderror
-                    </div>
-                  </label>
+                  <label for="position" class="block mb-2 text-sm font-medium text-gray-900">Position</label>
+                  <select id="position" name="position" class="border px-3 py-3 rounded-full w-full max-w-xs">
+                  <option value="">Status</option>
+                  <option value="teacher I">Teachet I</option>
+                  <option value="teacher II">Teacher II</option>
+                  <option value="teacher III">Teacher III</option>
+                  <option value="Master Teacher I">Master Teacher I</option>
+                  <option value="Master Teacher II">Master Teacher II</option>
+                  <option value="Master Teacher III">Master Teacher III</option>
+                  <option value="Master Teacher IV">Master Teacher IV</option>
+                </select>
+                 @error('position')
+                  <span class="text-red-500 label-text-alt">{{$message}}</span>
+                @enderror
+              </div>
             </div>
-            </div>
-            <button class="btn btn-outline btn-success">Submit</button>
+            <button class=" mt-5 btn btn-outline btn-success">Submit</button>
         </form>
     </div>
 
 </x-layout>
+

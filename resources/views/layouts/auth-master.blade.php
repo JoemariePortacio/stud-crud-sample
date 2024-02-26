@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.87.0">
     <title>Student Information</title>
 
     <!-- Tailwind CSS -->
@@ -17,11 +15,10 @@
 </head>
 <body class="text-center">
     
-    <main class="form-signin h-screen">
-
+    <main class="form-signin h-screen flex justify-center items-center bg-cover bg-center" style="background-image: url('{{ asset('img/dct.jpg') }}');">
         @yield('content')
-        
     </main>
+    
     
 </body>
 </html>

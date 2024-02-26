@@ -59,35 +59,49 @@
                       </label>
                 </div>
                 <div class="">
-                  <label class="form-control w-full max-w-xs">
-                      <div class="label">
-                        <span class="label-text">Status</span>
-                      </div>
-                      <input type="text" id="status" name="status" value="{{$editinfo->status}}" placeholder="Enter your Status" class="input input-bordered w-full max-w-xs" />
-                      <div class="label">
-                          @error('status')
-                          <span class="text-red-500 label-text-alt">{{$message}}</span>
-                          @enderror
-                      </div>
-                    </label>
-                </div>
-                <div class="">
-                    <label class="form-control w-full max-w-xs">
-                        <div class="label">
-                          <span class="label-text">Position</span>
-                        </div>
-                        <input type="text" id="position" name="position" value="{{$editinfo->posotion}}" placeholder="Enter your Position" class="input input-bordered w-full max-w-xs" />
-                        <div class="label">
-                            @error('position')
-                            <span class="text-red-500 label-text-alt">{{$message}}</span>
-                            @enderror
-                        </div>
-                      </label>
-                  </div>
+                  <label for="status" class="block mb-2 text-sm font-medium text-gray-900">Status</label>
+                  <select id="status" name="status" class="border px-3 py-3 rounded-full w-full max-w-xs" value="{{$editinfo->average}}">
+                    <option value="">Job Status</option>
+                    <option value="FullTime">Full-Time</option>
+                    <option value="PartTime">Part-Time</option>
+                  </select>
+                  @error('status')
+                  <span class="text-red-500 label-text-alt">{{$message}}</span>
+                  @enderror
+              </div>
+              <div class="">
+                <label for="position" class="block mb-2 text-sm font-medium text-gray-900">Position</label>
+                <select id="position" name="position" class="border px-3 py-3 rounded-full w-full max-w-xs" value="{{$editinfo->average}}">
+                  <option value="">Status</option>
+                  <option value="teacher I">Teacher I</option>
+                  <option value="teacher II">Teacher II</option>
+                  <option value="teacher III">Teacher III</option>
+                  <option value="Master teacher I">Master Teacher I</option>
+                  <option value="Master teacher II">Master Teacher II</option>
+                  <option value="Master teacher III">Master Teacher III</option>
+                  <option value="Master teacher IV">Master Teacher IV</option>
+                </select>
+                @error('position')
+                <span class="text-red-500 label-text-alt">{{$message}}</span>
+                @enderror
+            </div>
 
             </div>
-            <button class="btn btn-outline btn-success">Submit</button>
-        </form>
+            <label for="edit" class="mt-5 btn btn-success">Submit</label>
+              <div>
+                <input type="checkbox" id="edit" class="modal-toggle" />
+                <div class="modal" role="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Are you sure?</h3>
+                    <p class="py-4">do you want to update?</p>
+                  <div class="modal-action">
+                      <button type="submit"  class="btn">Yes</button>
+                      <label for="edit" class="btn">No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
     </div>
 
 </x-layout>

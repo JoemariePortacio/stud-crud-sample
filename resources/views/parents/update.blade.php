@@ -72,7 +72,7 @@
                     </label>
                 </div>
             </div>
-            <button class="btn btn-outline btn-success">Submit</button>
+            <button class="mt-5 btn btn-outline btn-success">Submit</button>
         </form>
     </div>
 

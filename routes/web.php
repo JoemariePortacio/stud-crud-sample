@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ParentsController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\FullCalenderController;
@@ -72,7 +73,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
             }); 
 
                 // Route for account settings
-                Route::get('/settings/home', function () {
+            Route::get('/settings/home', function () {
                     return view('accounts.home');
                 })->name('accounts.home');
 
@@ -80,6 +81,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
             Route::get('fullcalender', [FullCalenderController::class, 'index'])->name('fullcalender');
             Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax'])->name('fullcalender.ajax');
 
+
+            Route::get('/courses', [CourseController::class, 'index'])->name('courses.course');
+            Route::get('/courses/create', [CourseController::class, 'create'])->name('courses.create');
+            Route::post('/courses', [CourseController::class, 'store'])->name('courses.store');
+            Route::get('/edit/{id}',[CourseController::class, 'edit'])->name('courses.edit');
+            Route::put('/updates/{id}',[CourseController::class, 'updates'])->name('courses.update');
+            Route::delete('/delete/{id}',[CourseController::class, 'delete'])->name('courses.delete');
     });
 
 });

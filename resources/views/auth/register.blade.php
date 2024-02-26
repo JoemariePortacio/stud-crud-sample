@@ -3,9 +3,9 @@
 @section('content')
     <div class=" h-full flex flex-col justify-center  px-8 py-6 max-w-md mx-auto">
 
-        <form method="post" action="{{ route('register.perform') }}" class="bg-white shadow-md p-7 rounded-md">
+        <form method="post" action="{{ route('register.perform') }}" class="bg-transparent shadow-2xl p-7 rounded-md">
             @csrf
-            <h1 class="text-3xl font-semibold mb-6 text-center">Register</h1>
+            <h1 class="text-3xl font-semibold mb-6 text-center text-gray-700">Sign Up</h1>
 
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-start text-gray-700">Email address</label>
@@ -39,7 +39,10 @@
                 @enderror
             </div>
 
-            <button class="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-200" type="submit">Register</button>
+            <button class="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-200" type="submit">Sign Up</button>
+            <div class="underline hover:underline-offset-4 pt-2">
+                <a href="{{route('login')}}">Log In</a>
+            </div>
         </form>
     </div>
 @endsection

@@ -7,10 +7,11 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-             <div class="p-8 flex items-center bg-red-500">
-                <span class="text-2xl font-semibold"></span>
+            <div class="flex items-center ml-2 pt-2">
+                <img src="{{ asset('img/dctlogo.png') }}" alt="Example Image" class="rounded-full w-10 h-10 object-contain">
             </div>
-            <nav class="flex-1">
+            
+            <nav class="flex-1 pt-5">
                 <ul class="space-y-0 md:space-y-2 sm:flex sm:flex-col">
                     <!-- Sidebar links -->
                     <li>
@@ -26,7 +27,7 @@
                         <a href="{{route('parent.home')}}" class="block px-4 py-2 hover:bg-gray-700"><i class="fa-solid fa-user-group mr-2"></i>Parents</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-700"><i class="fa-solid fa-book-open mr-2"></i>Subject</a>
+                        <a href="{{route('courses.course')}}" class="block px-4 py-2 hover:bg-gray-700"><i class="fa-solid fa-book-open mr-2"></i>Courses</a>
                     </li>
                     <li>
                         <a href="{{route('fullcalender')}}" class="block px-4 py-2 hover:bg-gray-700"><i class="fa-solid fa-calendar mr-2"></i>Calendar</a>
